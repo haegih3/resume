@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+
+/* common */
+section {
+  width: 100%; height: auto;
+  padding-left: 0;
+}
+.inner {
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* goTop */
+.goTop {bottom: 30px; right: 20px;}
+@keyframes acorn {
+  100% {bottom: 50px;}
+}
+
+/* gnbGroup */
+.gnbGroup {
+	position: fixed;
+	top: -100%; left: 0;
+  width: 100%;
+  height: 60px;
+	padding: 0 10px;
+	background: #eee;
+	border-radius: 0;
+  text-align: center;
+	box-sizing: border-box;
+  transition: all 0.3s;
+}
+.gnbGroup .gnb-area {
+  width: auto;
+  margin: 0 auto;
+}
+.gnbGroup .menuBar {
+  float: right;
+  position: relative;
+  display: block;
+  width: 30px; height: 60px;
+  overflow: hidden;
+  z-index: 5;
+}
+.gnbGroup .menuBar span {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 100%; height: 4px;
+  background: #000;
+  transition: all 0.5s;
+}
+.gnbGroup .menuBar span:nth-child(1) {top: 17px;}
+.gnbGroup .menuBar span:nth-child(2) {top: 17px;}
+.gnbGroup .menuBar span:nth-child(3) {top: 28px;}
+.gnbGroup .menuBar span:nth-child(4) {top: 28px;}
+.gnbGroup .menuBar span:nth-child(5) {top: 39px;}
+.gnbGroup .menuBar span:nth-child(6) {top: 39px;}
+.gnbGroup .menuBar.on span:nth-child(1) {top: -100px;}
+.gnbGroup .menuBar.on span:nth-child(2) {top: 100px;}
+.gnbGroup .menuBar.on span:nth-child(3) {transform: rotate(-45deg); border: 1px solid #000; background: transparent;}
+.gnbGroup .menuBar.on span:nth-child(4) {transform: rotate(45deg);border: 1px solid #000;}
+.gnbGroup .menuBar.on span:nth-child(5) {top: -100px;}
+.gnbGroup .menuBar.on span:nth-child(6) {top: 100px;}
+.gnbGroup h1 {
+	display: inline-block;
+	margin-bottom: 0;
+  padding: 13px 0.3em 18px 0;
+	padding-bottom: 0;
+  border-right: 1px solid #aaa;
+	border-bottom: none;
+	font-size: 2rem;
+	font-weight: 500;
+	color: #222;
+}
+.gnb-tit {background: #eee; height: 100%;}
+.gnbGroup em {
+	display: inline;
+	font-size: 1.4rem;
+  color: #222;
+}
+.gnb {
+  position: absolute;
+  top: -1000px; left: 0;
+  border-top: 1px solid #aaa;
+  width: 100%;
+  background: #eee;
+  margin-top: 0;
+  transition: all 1s;
+  z-index: -1;
+}
+.gnb a {width: 100%;}
+.gnb.on {top: 60px;}
+
+/* intro */
+#intro {
+  height: 100vh;
+}
+
+/* mop */
+#mop {
+  height: 100vh;
+}
+
+/* ski */
+.ratesWrapper {
+	padding-top: 50px;
+	width: 700px;
+  margin: 0 auto;
+}
+.officeSki {
+	padding: 0;
+	margin-top: 3em;
+	box-sizing: border-box;
+}
+.officeSki h3 {
+  float: none;
+  width: 100%;
+	display: block;
+	margin-bottom: 10%;
+}
+.officeSki .contents {float: none; width: 100%;}
+.officeSki ul {width: 100%;}
+.officeSki ul li {margin: 0 auto 1em; width: 700px;}
+.officeSki ul li .title {
+	display: inline-block;
+	width: 180px;
+	margin-right: 1em;
+	font-size: 1.7rem;
+}
+.officeSki ul li .bars {
+	position: relative;
+	display: inline-block;
+  width: 500px;
+	min-width: 150px;
+	padding: 0.3em 0.5em;
+	text-align: right;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #000;
+  box-sizing: border-box;
+}
+.officeSki ul li:nth-child(1) .bars {width: 500px;}
+.officeSki ul li:nth-child(2) .bars {width: 300px;}
+.officeSki ul li:nth-child(3) .bars {width: 400px;}
+.officeSki ul li:nth-child(4) .bars {width: 200px;}
+.officeSki ul li .bars:before {
+	position: absolute;
+	top: 0; left: 0;
+	content: '';
+	display: inline-block;
+	width: 0; height: 100%;
+	background: #72717b;
+  transition: all 1.5s;
+	z-index: -1;
+}
+.officeSki ul li:nth-child(1) .bars:before {transition-delay: 3s;}
+.officeSki ul li:nth-child(2) .bars:before {transition-delay: 3.5s;}
+.officeSki ul li:nth-child(3) .bars:before {transition-delay: 4s;}
+.officeSki ul li:nth-child(4) .bars:before {transition-delay: 4.5s;}
+.officeSki ul li .bars.on:before {width: 100%;}
+
+/* pro */
+#pro article {margin-top: 0;}
+#pro .fLeft {
+  width: 40%; height: 200px;
+  margin: 20px 4% 0;
+}
+#pro .fLeft figure {
+  display: table;
+  width: 100%; height: 100px;
+}
+
+/* uxui */
+.web h3 {
+  font-size: 1.7rem;
+}
+.web h3 > span {
+  margin: 0.2em 0 0 1em;
+  font-size: 1.5rem;
+  color: #aaa
+}
+
+#uxui h2 {
+  position: static;
+  transform: none;
+}
+#uxui .app {
+  position: relative;
+  margin-top: 30px;
+}
+.app .swiper-container {width: 70%; height: 100%;}
+.app .swiper-slide a {
+  display: block;
+  height: 440px;
+  text-align: center;
+}
+.app .swiper-slide a img {
+  min-width: 210px;
+  max-width: 250px;
+  height: auto;
+}
+.app .swiper-slide a:hover img {transform: scale(1.1);}
