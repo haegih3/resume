@@ -246,7 +246,7 @@ figure img {display: block; width: 100%;}
 #info .name a {
 	display: block;
 	font-size: 1.5rem;
-	line-height: 1.1;
+	line-height: 1.6;
 	color: #aaa;
 }
 #info .name a:hover {
@@ -261,32 +261,38 @@ figure img {display: block; width: 100%;}
     padding-right: 20px;
   }
 }
-#info .infoTxt {margin-top: calc(100vh - 840px);}
+#info .infoTxt {margin-top: calc(100vh - 900px);}
 #info .infoTxt > div {width: 45%;}
 #info .infoTxt dl {
-	margin-bottom: 2em;
+	margin-bottom: 1.4em;
 	padding-left: 15px;
 	border-left: 2px solid #72a15c;
 }
 #info .infoTxt dl dt {width: 30%;}
 #info .infoTxt dl dd {
 	width: 70%;
-  line-height: 2.5;
 	text-align: right;
 	color: #aaa;
 }
 #info .infoTxt .ddInner p {
 	font-size: 1.7rem;
+  padding-top: 1em;
 }
-#info .infoTxt .ddInner span {
+#info .infoTxt .ddInner p:first-child {
+  padding-top: 0;
+}
+#info .infoTxt > .fRight .ddInner .descWr {
+  padding-top: 3em;
+  line-height: 2.7;
+}
+#info .infoTxt > .fRight .ddInner .descWr span {
 	display: block;
 	font-size: 1.5rem;
 }
-#info .infoTxt .ddInner span:before {
+#info .infoTxt > .fRight .ddInner .descWr span:before {
 	content: '-';
 	padding-right: 0.5em;
 }
-#info .infoTxt > .fRight .ddInner p {margin-bottom: 1em;}
 
 /* ski */
 .ratesWrapper {
@@ -346,9 +352,9 @@ figure img {display: block; width: 100%;}
 .ratesWrapper .rate:nth-child(5) svg .first {transition: all 2s 1.2s;}
 .ratesWrapper .rate.on:nth-child(1) svg .first {stroke-dashoffset: 113;}
 .ratesWrapper .rate.on:nth-child(2) svg .first {stroke-dashoffset: 396;}
-.ratesWrapper .rate.on:nth-child(3) svg .first {stroke-dashoffset: 226;}
-.ratesWrapper .rate.on:nth-child(4) svg .first {stroke-dashoffset: 339;}
-.ratesWrapper .rate.on:nth-child(5) svg .first {stroke-dashoffset: 452;}
+.ratesWrapper .rate.on:nth-child(3) svg .first {stroke-dashoffset: 61;}
+.ratesWrapper .rate.on:nth-child(4) svg .first {stroke-dashoffset: 61;}
+.ratesWrapper .rate.on:nth-child(5) svg .first {stroke-dashoffset: 181;}
 /*
 .ratesWrapper .rate:nth-child(1) svg .first {stroke-dashoffset: 113;}
 .ratesWrapper .rate:nth-child(2) svg .first {stroke-dashoffset: 339;}
