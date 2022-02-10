@@ -261,7 +261,7 @@ figure img {display: block; width: 100%;}
     padding-right: 20px;
   }
 }
-#info .infoTxt {margin-top: calc(100vh - 900px);}
+#info .infoTxt {margin-top: calc(100vh - 840px);}
 #info .infoTxt > div {width: 45%;}
 #info .infoTxt dl {
 	margin-bottom: 1.4em;
