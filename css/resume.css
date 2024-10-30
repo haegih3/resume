@@ -276,7 +276,7 @@ figure img {display: block; width: 100%;}
 }
 #info .infoTxt .ddInner p {
 	font-size: 1.5rem;
-  padding-top: 1em;
+  padding-top: .5em;
 }
 #info .infoTxt .ddInner p:first-child {
   padding-top: 0;
