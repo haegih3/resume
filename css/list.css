@@ -1,0 +1,679 @@
+@charset "utf-8";
+@import url(fonts.css);
+
+body {
+  background-color: #fff;
+  --black: #0c0c0c;
+}
+
+/* pc에서 감추기 */
+.pc-hdd {
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  height: 0;
+  text-indent: -9999px;
+}
+
+/* 웹표준 고정 */
+.skipTop {
+  position: absolute;
+  top: -50px;
+  left: 0;
+  text-indent: -9999px;
+  font-size: 0;
+  width: 100%;
+  z-index: 900;
+}
+.skipTop a:active,
+.skipTop a:focus {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  display: block;
+  padding: 5px 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  text-indent: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* common */
+main {
+  width: 100%;
+}
+section {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 0;
+  box-sizing: border-box;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section:nth-child(2n) {
+  background: #222;
+}
+.inner {
+  width: 1220px;
+  padding: 0 5%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+h2 {
+  margin: 0 auto 60px;
+  width: 300px;
+  height: 50px;
+  background: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.7rem;
+  color: #000;
+}
+
+figure {
+  overflow: hidden;
+}
+figure img {
+  display: block;
+  width: 100%;
+}
+
+.fLeft {
+  float: left;
+}
+.fRight {
+  float: right;
+}
+.transTfirst {
+  text-transform: capitalize;
+}
+.transTupper {
+  text-transform: uppercase;
+}
+.blank20 {
+  width: 20px;
+}
+.blank30 {
+  width: 30px;
+}
+
+.greenbar:before {
+  content: "|";
+  padding-right: 10px;
+  color: #72a15c;
+}
+
+/* goTop */
+.goTop {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  padding-top: 22px;
+  background: url(../img/ico-acorn_bw.png) no-repeat center / cover;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  transition: all 0.5s;
+  animation: acorn 1s infinite alternate;
+  box-sizing: border-box;
+  opacity: 0.8;
+  z-index: 500;
+}
+.goTop.on {
+  display: block;
+}
+@keyframes acorn {
+  100% {
+    bottom: 90px;
+  }
+}
+.goTop:hover {
+  color: #72a15c;
+}
+
+/* mop */
+#mop {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: url(../img/web-footer.png) no-repeat center top / cover;
+}
+#mop .mopTxt {
+  position: absolute;
+  top: 34%;
+  left: 46%;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+  color: #9baa94;
+}
+#mop .mopTxt span {
+  display: inline-block;
+}
+#mop .copyright {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 1.4px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #aaa;
+}
+
+/* 세부정보들 */
+
+/* info */
+#info h2 {
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+#info figure {
+  /*	position: relative;*/
+  width: 280px;
+}
+#info figure img {
+  /* -webkit-filter: grayscale(100%); */
+  /* filter: gray; */
+}
+#info .name {
+  margin: 4em 4em 0 0;
+  text-align: right;
+}
+#info .name strong {
+  display: block;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  font: 5rem/1 "Lato", sans-serif;
+  border-bottom: 1px solid #fff;
+}
+#info .name a {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+#info .name a:hover {
+  color: #72a15c;
+  animation: textMoving 0.5s infinite alternate;
+}
+@keyframes textMoving {
+  0% {
+    padding-right: 0px;
+  }
+  100% {
+    padding-right: 20px;
+  }
+}
+#info .infoTxt {
+  margin-top: calc(100vh - 840px);
+  display: flex;
+  justify-content: space-between;
+}
+#info .infoTxt > * {
+  width: 45%;
+}
+#info .infoTxt dl {
+  display: flex;
+  margin-bottom: 1.2em;
+  padding-left: 15px;
+  border-left: 2px solid #72a15c;
+}
+#info .infoTxt dl dt {
+  flex-shrink: 0;
+}
+#info .infoTxt dl dd {
+  flex-grow: 1;
+  text-align: right;
+  color: #4e4e4e;
+}
+#info .infoTxt .ddInner p {
+  font-size: 1.5rem;
+  padding-top: 0.5em;
+}
+#info .infoTxt .ddInner p .desc {
+  font-size: 1.3rem;
+  color: #72a15c;
+  line-height: 1;
+}
+#info .infoTxt .ddInner p a span {
+  font-size: 1rem;
+}
+#info .infoTxt .ddInner p:first-child {
+  padding-top: 0;
+}
+#info .infoTxt .ddInner .descWr {
+  padding-top: 0.5em;
+}
+#info .infoTxt .ddInner .descWr span {
+  display: block;
+  font-size: 1.4rem;
+}
+#info .infoTxt .ddInner .descWr span:before {
+  content: "-";
+  padding-right: 0.5em;
+}
+#info .infoTxt > .fRight .ddInner p {
+  padding-top: 1.5em;
+}
+
+/* pro */
+#pro article {
+  margin-top: -100px;
+}
+#pro .fLeft {
+  width: 25%;
+  height: 300px;
+  margin: 5% 4% 0;
+}
+#pro .fLeft figure {
+  display: table;
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+#pro .fLeft figure span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+#pro .fLeft figure img {
+  display: inline;
+}
+#pro .fLeft:nth-child(1) figure img {
+  width: 110px;
+}
+#pro .fLeft:nth-child(2) figure img {
+  width: 110px;
+}
+#pro .fLeft:nth-child(3) figure img {
+  width: 200px;
+}
+#pro .fLeft:nth-child(4) figure img {
+  width: 250px;
+}
+#pro .fLeft:nth-child(5) figure img {
+  width: 235px;
+}
+#pro .fLeft:nth-child(6) figure img {
+  width: 200px;
+}
+#pro .fLeft p {
+  position: relative;
+  padding-left: 10px;
+}
+#pro .fLeft p:before {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 20px;
+  background: #72a15c;
+  transition: all 0.5s;
+}
+#pro .fLeft p span,
+#pro .fLeft p em {
+  display: block;
+  color: #fff;
+}
+#pro .fLeft p em {
+  font-size: 1.4rem;
+  color: #aaa;
+}
+#pro .fLeft p em.ico-mobile {
+  position: relative;
+}
+#pro .fLeft p em.ico-mobile:after {
+  position: absolute;
+  top: 20%;
+  transform-origin: bottom center;
+  display: inline-block;
+  margin-left: 1em;
+  content: "\f3cd";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  color: #72a15c;
+  transition: all 0.5s;
+}
+#pro .fLeft a:hover figure {
+  background-color: #ffffff27;
+}
+#pro .fLeft a:hover p:before {
+  height: 93%;
+}
+#pro .fLeft a:hover p span {
+  color: #72a15c;
+}
+
+@media screen and (max-width: 1020px) {
+  #info .infoTxt > .fRight .ddInner p {
+    padding-top: 1em;
+  }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1219px) {
+  /* common */
+  .inner {
+    padding: 0 10px;
+  }
+
+  /* goTop */
+  .goTop {
+    bottom: 30px;
+    right: 20px;
+  }
+  @keyframes acorn {
+    100% {
+      bottom: 50px;
+    }
+  }
+
+  /* mop */
+  #mop {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* 모바일에서 감추기 */
+  .mo-hdd,
+  .mo-hdd {
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    text-indent: -9999px;
+  }
+
+  /* pc 살리기 */
+  .pc-hdd {
+    font-size: inherit;
+    line-height: inherit;
+    overflow: visible;
+    height: auto;
+    text-indent: 0;
+  }
+
+  /* common */
+  section {
+    width: 100%;
+    height: auto;
+    padding-top: 20px;
+    padding-left: 0;
+  }
+  .inner {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /*	background: coral;*/
+  }
+  h2 {
+    margin: 10px auto 60px;
+    width: 300px;
+    height: 50px;
+    background: #fff;
+    text-align: center;
+    line-height: 50px;
+    font-size: 1.7rem;
+    color: #000;
+  }
+
+  /* goTop */
+  .goTop {
+    bottom: 30px;
+    right: 20px;
+    width: 35px;
+    height: 43px;
+    padding-top: 16px;
+    font-size: 1.3rem;
+    opacity: 0.6;
+  }
+  @keyframes acorn {
+    100% {
+      bottom: 50px;
+    }
+  }
+
+  /* mop */
+  #mop {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background: url(../img/mop-bg.jpg) no-repeat center top / cover;
+  }
+  #mop .mopTxt {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px 0;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-align: center;
+    word-break: keep-all;
+    color: #aaa;
+    box-sizing: border-box;
+  }
+  #mop .mopTxt > span {
+    display: none;
+  }
+  #mop .mopTxt .bye {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 50px;
+    background: url(../img/mop-txt.png) no-repeat center top / contain;
+  }
+  #mop .copyright {
+    bottom: 20px;
+    letter-spacing: 1px;
+    font-size: 1.3rem;
+  }
+  #mop .copyright > span {
+    display: block;
+  }
+
+  /* 세부정보들 */
+
+  /* info */
+  #info figure {
+    margin: 0 auto;
+    width: 60%;
+    max-width: 200px;
+  }
+  #info .titArea .fRight {
+    float: none;
+  }
+  #info .name.fRight {
+    float: none;
+    clear: both;
+  }
+  #info .name {
+    width: 100%;
+    margin: 0;
+    padding-top: 2em;
+    text-align: center;
+  }
+  #info .infoTxt {
+    margin-top: 50px;
+    display: block;
+  }
+  #info .infoTxt > * {
+    width: 100%;
+  }
+  #info .infoTxt > .fRight {
+    margin-top: 1.2em;
+  }
+  #info .infoTxt dl {
+    display: block;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    background-color: #72a15c10;
+    background: linear-gradient(145deg, #72a15c10, #fff);
+  }
+  #info .infoTxt dl .fLeft,
+  #info .infoTxt dl .fRight {
+    float: none;
+  }
+  #info .infoTxt dl dd {
+    padding-top: 1em;
+    width: 100%;
+    line-height: 1.5;
+  }
+  #info .infoTxt .ddInner p {
+    font-size: 1.5rem;
+  }
+
+  /* ski */
+  .ratesWrapper {
+    padding-top: 0;
+    width: 210px;
+    margin: 0 auto;
+  }
+  .ratesWrapper .rate {
+    position: relative;
+    float: none;
+    width: 210px;
+    text-align: center;
+  }
+  .officeSki {
+    padding: 0 7%;
+    margin-top: 15%;
+    box-sizing: border-box;
+  }
+  .officeSki .fLeft,
+  .officeSki .fRight {
+    float: none;
+  }
+  .officeSki h3 {
+    float: none;
+    width: 100%;
+    display: block;
+    margin-bottom: 1.5em;
+  }
+  .officeSki ul li {
+    margin-bottom: 1em;
+  }
+  .officeSki ul li .title {
+    display: block;
+    font-size: 1.5rem;
+  }
+  .officeSki ul li .bars {
+    display: block;
+    min-width: 103px;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .officeSki ul li:nth-child(1) .bars {
+    width: 100%;
+  }
+  .officeSki ul li:nth-child(2) .bars {
+    width: 60%;
+  }
+  .officeSki ul li:nth-child(3) .bars {
+    width: 80%;
+  }
+  .officeSki ul li:nth-child(4) .bars {
+    width: 25%;
+  }
+  .officeSki ul li .bars:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    background: #72717b;
+    transition: all 1.5s;
+    z-index: -1;
+  }
+
+  /* pro */
+  #pro article {
+    margin-top: 0;
+  }
+  #pro .fLeft {
+    float: none;
+    width: 100%;
+    height: 200px;
+    margin: 20px 0 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  #pro .fLeft figure {
+    display: table;
+    width: 100%;
+    height: 80px;
+  }
+
+  /* uxui */
+  #uxui .inner {
+    position: static;
+  }
+  #uxui h2 {
+    position: static;
+    transform: none;
+  }
+  .web > div {
+    float: none;
+    width: 100%;
+  }
+  .web .viewMo {
+    position: absolute;
+    bottom: calc(100% - 30px);
+    width: 90px;
+    background: #000;
+    font-size: 1.3rem;
+  }
+  .web .fLeft .viewMo {
+    left: calc(100% - 90px);
+  }
+  .web .fRight .viewMo {
+    right: 0;
+  }
+  .web .viewMo:before {
+    border-color: #aaa;
+  }
+  .web h3 {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+  .web h3 > span {
+    margin: 0.2em 0 0 1em;
+    font-size: 1.5rem;
+    color: #aaa;
+  }
+  .web figure {
+    width: 100%;
+    height: 300px;
+    margin: 1em 0 2em;
+  }
+  .web .fLeft h3,
+  .web .fRight figure {
+    float: none;
+  }
+  .web .fRight h3,
+  .web .fLeft figure {
+    float: none;
+  }
+}
